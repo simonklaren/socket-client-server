@@ -4,9 +4,13 @@
     <projectFile>SocketClient/SocketClient.csproj</projectFile>
     <projectFile>SocketServer/SocketServer.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ebd232bb-1b7b-46c9-80a0-51387358f064" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SocketClientServer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClientServer.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SocketClientServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SocketClientServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +20,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "simonklaren"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/simonklaren/socket-client-server.git",
+    "accountId": "a52cc911-e4d6-4d1d-a63b-2cd1ed5c5ee4"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/SocketClient/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
 }]]></component>
@@ -99,13 +116,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1778435463402</updated>
-      <workItem from="1778435467024" duration="342000" />
+      <workItem from="1778435467024" duration="2031000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
