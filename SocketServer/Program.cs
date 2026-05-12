@@ -15,23 +15,49 @@ Console.WriteLine("Server: Listening on port " + port);
 // wait until client connects
 var client = listener.AcceptTcpClient();
 
-if (client.Connected)
+Console.WriteLine("Server: Client connected");
+
+// get stream of client (needed to read/write data)
+var clientStream = client.GetStream();
+
+var streamWriter = new StreamWriter(clientStream){AutoFlush = true}; // autoflush true so we dont need to flush after each writeline
+
+// send welcome message to client
+streamWriter.WriteLine("Hello World!");
+
+Console.WriteLine("Waiting for client input...");
+
+// read line of client
+var streamReader = new StreamReader(clientStream);
+
+while (true)
 {
-    Console.WriteLine("Server: Client connected");
+    var clientLine = streamReader.ReadLine();
+
+    if (clientLine == null)
+    {
+        Console.WriteLine("Server: Client disconnected unexpectedly");
+        break;
+    }
     
-    // get stream of client (needed to read/write data)
-    var clientStream = client.GetStream();
+    Console.WriteLine("Client: " + clientLine);
+
+    if (clientLine.Equals("stop", StringComparison.OrdinalIgnoreCase))
+    {
+        streamWriter.WriteLine("Server disconnecting");
+        break;
+    }
     
-    var streamWriter = new StreamWriter(clientStream);
-    // write hello world line
-    streamWriter.WriteLine("Hello World!");
-    // write buffered lines to stream
-    streamWriter.Flush();
-    
-    streamWriter.Close();
-    
-    clientStream.Close();
+    streamWriter.WriteLine("Server heeft het volgende ontvangen: " + clientLine);
 }
+
+// sluit alle connecties
+streamWriter.Close();
+streamReader.Close();
+clientStream.Close();
+
 
 client.Close();
 listener.Stop();
+
+Console.WriteLine("Server: Stopped");
